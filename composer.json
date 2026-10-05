@@ -1,0 +1,43 @@
+{
+    "name": "tyhpdef/spiral-roadrunner-worker-impl",
+    "description": "Implementation package for tyhpdef/spiral-roadrunner-worker. Require tyhpdef/spiral-roadrunner-worker, not this package.",
+    "keywords": [
+        "dev",
+        "static analysis",
+        "internal"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "version": "3.6.2.0",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "tyhp": {
+            "interopContractVersion": 1,
+            "php-version": ">=8.2",
+            "require": {
+                "tyhpdef/php": "@dev",
+                "tyhpdef/psr-log": "@dev"
+            },
+            "package": {
+                "include": [
+                    "./_tyhpdef/*.tyhpdef",
+                    "./_tyhpdef/extensions/*.tyhpdef"
+                ],
+                "overlay": [
+                    "./_tyhpdef/overlays/stubs/*.tyhpdef",
+                    "./_tyhpdef/overlays/*.tyhpdef"
+                ]
+            },
+            "public": "tyhpdef/spiral-roadrunner-worker"
+        }
+    },
+    "require": {
+        "php": ">=8.2",
+        "spiral/roadrunner-worker": "3.6.2"
+    },
+    "require-dev": {
+        "tyhpdef/php": "@dev",
+        "tyhpdef/psr-log": "@dev"
+    }
+}
